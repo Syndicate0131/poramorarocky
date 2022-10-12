@@ -1,0 +1,67 @@
+.content-prim{
+    margin-top: 2rem;
+}
+
+.content-form-prin{
+    display: flex;
+    justify-content: space-around;
+    width:50%;
+    height: 10rem;
+    padding: 10px;
+    background:#fff;
+    border-radius: 5px;
+    margin:15px auto;
+}
+
+.content-form-pet{
+    width:50%;
+    height: 100%;
+    padding: 10px;
+    background:#fff;
+    border-radius: 5px;
+    margin:15px auto;
+}
+
+.button-prin{
+
+    margin: 2%;
+    width: 50%;
+    border: none;
+    font-size:16px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--secundary-color);
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    font-weight: bold;
+    transition: .3s;
+    margin-top:20px;
+}
+.button-prin:hover{
+    background-color: #111;
+    transition: .3s;
+    cursor: pointer;
+}
+.prin-a{
+    margin: 2%;
+    width: 50%;
+}
+.button-prin-form{
+    margin: 2%;
+    width: 10%;
+    border: none;
+    font-size:16px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--secundary-color);
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    font-weight: bold;
+    transition: .3s;
+    margin-top:20px;
+}
+.button-prin-form:hover{
+    background-color: #111;
+    transition: .3s;
+    cursor: pointer;
+}
