@@ -42,7 +42,11 @@ Volver
             @endif
 
             <td><img src="photoUser/{{$user->foto}}" alt="Foto Usuario" width="100" height="100"></td>
-            <td><a href="{{route('usuario.edit',$user->id)}}">Editar</a></td>            <td><a href="{{route('usuario.destroy',$user->id)}}">Eliminar</a></td>
+            <td><a href="{{route('usuario.edit',$user->id)}}">Editar</a></td>            <td><form action="{{route('usuario.destroy',$user->id)}}" method="post">
+            @csrf
+            @method('DELETE')    
+            <button>Eliminar Usuario</button></form>
+        </td>
         </tr>
         @endforeach
     </tbody>
