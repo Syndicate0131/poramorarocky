@@ -39,7 +39,7 @@
             </select>
             <div class="button">
                 
-                    <button type="submit" class="ov-btn-slide-right" onclick="alertConfirm()">
+                    <button type="submit" class="ov-btn-slide-right" >
                        Registrar Usuario
                     </button>
             

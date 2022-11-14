@@ -24,7 +24,7 @@
                     <a class="nav-item" href="#nosotros">Nosotros</a>
                     <a class="nav-item" href="#adopta">Adopta</a>
                     <a class="nav-item" href="#contacto">Contacto</a>
-                    <a href="#" id="hero_cta" class="nav-item">
+                    <a href="/log" id="" class="nav-item">
                         <strong>Log in
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewbox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -52,9 +52,6 @@
                 <div class="container-form">
                     <form action="{{ route('login') }}" method="POST" class="form">
                          @csrf
-                         @error('message')
-                             <p>ERROR</p>
-                         @enderror
                         <label for="">Correo</label><br>
                         <input type="email" name="correo" id="">
                         <label for="">Contraseña</label><br>

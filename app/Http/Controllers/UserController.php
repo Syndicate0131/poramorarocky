@@ -29,14 +29,17 @@ class UserController extends Controller
     {
         return view('users.form');
     }
+    public function log()
+    {
+        return view('users.login');
+    }
 
-    public function login(Request $request){
-        if (Auth::attempt($request->only('correo','clave')) == false) {
-           return back()->withErrors([
-            'message' => 'El correo o la contraseña son incorrectos, por favor vuelva a interntarlo'
-           ]);
+    public function login(){
+        $credentials = request()->only('correo','clave');
+        if (Auth::attempt($credentials)){
+            return 'Logeo bien';
         }
-        // return $request->only('email','password');
+        return 'login failed';
     }
 
     /**
@@ -67,7 +70,7 @@ class UserController extends Controller
         if ($v->fails()) {
             //Validación incorrecta
             // mostrar la vista new, pero llevando los errrores
-            return redirect('productos/create')->withErrors($v);
+            return view('users.form')->withErrors($v);
             var_dump($v->errors());
        } else {
         $archivo= $request->foto;

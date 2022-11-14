@@ -30,6 +30,7 @@
     @yield('content')
 
     <script src="{{ asset('js/adoptions.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/users.js') }}" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
     <script>

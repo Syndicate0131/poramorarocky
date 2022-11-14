@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\MyvaccineController;
 use App\Http\Controllers\VaccineController;
@@ -29,6 +30,7 @@ Route::get('principal', [PetController::class, 'principal']);
 // Usuarios
 Route::resource('usuario', UserController::class);
 Route::post('login',[UserController::class,'login'])->name('login');
+Route::get('log', [UserController::class, 'log']);
 Route::get('formuser', [UserController::class, 'create']);
 
 //Adopcion
@@ -49,6 +51,5 @@ Route::resource('vaccine', VaccineController::class);
 //Mis Vacunas
 Route::get('formmyvac', [MyvaccineController::class, 'create']);
 Route::resource('myvaccine', MyvaccineController::class);
-
 
 ?>
