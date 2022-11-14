@@ -1872,7 +1872,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_service.scss */
 .service_area {
-  padding-top: 241px;
+  padding-top: 22px;
   padding-bottom: 106px;
 }
 
@@ -2305,7 +2305,7 @@ h3 {
 .testmonial_area .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: visible;
-  -webkit-transform: translate3d(0, 0, 0);
+
 }
 
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_gallery.scss */
@@ -3192,7 +3192,7 @@ h3 {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
+
   display: block;
   outline: none;
   padding: 0;
@@ -4910,7 +4910,7 @@ h6 {
 /* line 14, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
   background: -webkit-linear-gradient(131deg, #eb592d 0%, #eb592d 99%);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
   text-decoration: none;
   -webkit-transition: 0.5s;
@@ -4974,7 +4974,7 @@ h6 {
 .single-blog .tag {
   text-align: left;
   display: inline-block;
-  float: left;
+
   font-size: 13px;
   font-weight: 300;
   margin-right: 22px;
@@ -6402,7 +6402,7 @@ h6 {
 /* line 76, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a:hover {
   background: -webkit-linear-gradient(131deg, #ff7e5f 0%, #feb47b 99%);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
@@ -6510,9 +6510,8 @@ h6 {
   -webkit-transition: 0.8s;
   transition: 0.8s;
   background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
-  -webkit-animation: 1s;
 }
 
 /* line 150, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_blog_part.scss */

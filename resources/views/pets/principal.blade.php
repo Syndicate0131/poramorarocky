@@ -35,7 +35,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="" class="logo-head">
+                                    <img src="{{ asset('dash/img/logo.png')}}" alt="" class="logo-head">
                                 </a>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                         <li><a href="index.html">Funcionalidades</a></li>
                                         <li><a href="index.html">Ventajas</a></li>
                                         <li><a href="index.html">Contacto</a></li>
-                                        <li><a href="login.html" ><button class="boxed-btn4">Inicio sesión</button></a></li>
+                                        <li><a href="/" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -62,49 +62,6 @@
             </div>
         </div>
     </header>
-
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider slider_bg_1 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 col-md-6">
-                        <div class="slider_text">
-                            <h3><span >Por amor a rocky</span> <br>Sistema para la gestión de adopciones</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dog_thumb d-none d-lg-block">
-                <img src="{{ asset('dash/img/banner/dog.png')}}" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- slider_area_end -->
-    
-    <!-- pet_care_area_start  -->
-    <div class="pet_care_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-6">
-                    <div class="pet_thumb">
-                        <img src="{{ asset('dash/img/about/pet_care.png')}}" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-1 col-md-6">
-                    <div class="pet_info">
-                        <div class="section_title">
-                            <h3><span>Con el sistema,</span> <br>
-                             todo es más fácil  </h3>
-                            <p>El sistema va en base para la gestión de adopción de animales para fundaciones sin ánimo de lucro por el bien de todos los animales sin un hogar, ayudando a 
-                            agilizar y gestionar correctamente las gestiones de la fundación.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- pet_care_area_end  -->
     <!-- service_area_start  -->
     <div class="service_area">
@@ -126,23 +83,9 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Usuarios</h3>
-                            <p>Que tendrán el control dependiendo su rol y lo que la fundación necesite para el control del sistema,
-                                dando seguridad para el usuario y el sistema en concreto</p>
-                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service active">
-                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                             <div class="service_icon">
-                                 <img src="{{ asset('dash/img/gato.png')}}" alt="">
-                             </div>
-                         </div>
-                         <div class="service_content text-center">
-                            <h3>Peludos</h3>
-                            <p>Ellos son la base de nuestro sistema y la razón de este, así que este se encarga completamente del manejo
-                            de la información específica de cada uno de ellos
-                            </p>
+                            <a href="" ><button class="boxed-btn4">Listar Usuarios</button></a>
+                            <hr>
+                            <a href="" ><button class="boxed-btn4">Registrar Usuario</button></a>
                          </div>
                     </div>
                 </div>
@@ -155,9 +98,65 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Adopción</h3>
-                            <p>Aquí se almacenarán todos los datos que aplican en un caso de adopción, validando y dando a conocer
-                               de manera específica y clara toda a información para el manejo
-                            </p>
+                            <a href="" ><button class="boxed-btn4">Listar Adopciónes</button></a>
+                            <hr>
+                            <a href="" ><button class="boxed-btn4">Registrar Adopción</button></a>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service active">
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/gato.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Peludos</h3>
+                            <a href="" ><button class="boxed-btn4">Listar Peludos</button></a>
+                            <hr>
+                            <a href="" ><button class="boxed-btn4">Registrar Peludo</button></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-7 col-md-10">
+                    <div class="section_title text-center mb-95">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+            
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service active">
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/vacuna.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Mis Vacunas</h3>
+                            <a href="" ><button class="boxed-btn4">Listar Mi Vacunas</button></a>
+                            <hr>
+                            <a href="" ><button class="boxed-btn4">Registrar Mi Vacuna</button></a>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/lista.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Vacuna</h3>
+                            <a href="" ><button class="boxed-btn4">Listar Vacunas</button></a>
+                            <hr>
+                            <a href="" ><button class="boxed-btn4">Registrar Vacuna</button></a>
                          </div>
                     </div>
                 </div>
@@ -165,113 +164,6 @@
         </div>
     </div>
     <!-- service_area_end -->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-        <section class="py-6">
-
-            <div class="container">
-              <div class="container">
-                <div class="row align-items-center">
-                  <div class="col-md-6 order-md-1 text-center text-md-start"><img class="img-fluid mb-4" src="{{ asset('dash/img/about/FuncDog.png')}}" /></div>
-                  <div class="col-md-6 text-center text-md-start">
-                    <div class="section_title text-center mb-95 2">
-                        <h3 class="func-tit">Funcionalidades</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-4">
-                              <div class="py-4"><img class="img-fluid" src="{{ asset('dash/img/fun1.png')}}" width="90" alt="" /></div>
-                              <h5 class="fw-bold text-undefined">Verificación hogar</h5>
-                              <p class="mt-2 mb-0">Verificación que la mascota vivirá plenamente.</p>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-4">
-                              <div class="py-4"><img class="img-fluid" src="{{ asset('dash/img/fun2.png')}}" width="90" alt="" /></div>
-                              <h5 class="fw-bold text-undefined">Condición del animal</h5>
-                              <p class="mt-2 mb-0">Verificación de alguna condición única.</p>
-                            </div>
-                          </div>
-                      <div class="col-md-6">
-                        <div class="mb-4">
-                          <div class="py-4"><img class="img-fluid" src="{{ asset('dash/img/fun3.png')}}" width="90" alt="" /></div>
-                          <h5 class="fw-bold text-undefined">Estado del animal</h5>
-                          <p class="mt-2 mb-0">Validación del estado del animal y sus suplementos.</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="mb-4">
-                          <div class="py-4"><img class="img-fluid" src="{{ asset('dash/img/fun4.png')}}" width="90" alt="" /></div>
-                          <h5 class="fw-bold text-undefined">Contratos legales</h5>
-                          <p class="mt-2 mb-0">Validación de contratos legales sobre la adopción del animal.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of .container-->
-    
-          </section>
-          <!-- <section> close ============================-->
-          <!-- ============================================-->
-    <!-- adapt_area_end  -->
-
-    <!-- testmonial_area_start  -->
-    <div class="testmonial_area">
-        <div class="container">
-                <div class="row justify-content-center ">
-                    <div class="col-lg-7 col-md-10">
-                        <div class="section_title text-center mb-95">
-                            <h3>Ventajas</h3>
-                        </div>
-                    </div>
-                </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="textmonial_active owl-carousel">
-                        <div class="testmonial_wrap">
-                            <div class="single_testmonial d-flex align-items-center">
-                                <div class="test_thumb">
-                                    <img src="{{ asset('dash/img/vacuna.png')}}" alt="">
-                                </div>
-                                <div class="test_content">
-                                    <h4>Validacion Vacunas</h4>
-                                    <p>En nuestro sistema tenemos en cuenta la seguridad del peludo y tenemos validaciones del estado del animal.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testmonial_wrap">
-                            <div class="single_testmonial d-flex align-items-center">
-                                <div class="test_thumb">
-                                    <img src="{{ asset('dash/img/candado.png')}}" alt="">
-                                </div>
-                                <div class="test_content">
-                                    <h4>Permisos de Usuario</h4>
-                                    <p>Ya que trataremos con información del usuario, damos seguridad y permisos, según el tipo de usuario en el sistema.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testmonial_wrap">
-                            <div class="single_testmonial d-flex align-items-center">
-                                <div class="test_thumb">
-                                    <img src="{{ asset('dash/img/lista.png')}}" alt="">
-                                </div>
-                                <div class="test_content">
-                                    <h4>Seguimiento</h4>
-                                    <p>El sistema generará automáticamente los documentos requeridos por el usuario para agilizar el proceso y verificarlo.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    <!-- testmonial_area_end  -->
 
 
     <section class="contact-section">
