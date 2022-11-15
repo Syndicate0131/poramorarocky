@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Index</title>
+    <title>Por Amor A Rocky</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,6 +39,7 @@
                                 </a>
                             </div>
                         </div>
+                        @if(Auth::user()->tipousuario===1)
                         <div class="col-xl-12 col-lg-9">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
@@ -54,9 +55,11 @@
                                 </nav>
                             </div>
                         </div>
+                        @else
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -83,9 +86,10 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Usuarios</h3>
-                            <a href="" ><button class="boxed-btn4">Listar Usuarios</button></a>
+                            <a href="{{ route('usuario.index')}}" ><button class="boxed-btn4">Listar Usuarios</button></a>
                             <hr>
-                            <a href="" ><button class="boxed-btn4">Registrar Usuario</button></a>
+                            <br>
+                            <a href="{{ route('usuario.create')}}" ><button class="boxed-btn4">Registrar Usuario</button></a>
                          </div>
                     </div>
                 </div>
@@ -98,9 +102,10 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Adopción</h3>
-                            <a href="" ><button class="boxed-btn4">Listar Adopciónes</button></a>
+                            <a href="{{ route('adoption.index')}}" ><button class="boxed-btn4">Listar Adopciónes</button></a>
                             <hr>
-                            <a href="" ><button class="boxed-btn4">Registrar Adopción</button></a>
+                            <br>
+                            <a href="{{ route('adoption.create')}}" ><button class="boxed-btn4">Registrar Adopción</button></a>
                          </div>
                     </div>
                 </div>
@@ -113,9 +118,10 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Peludos</h3>
-                            <a href="" ><button class="boxed-btn4">Listar Peludos</button></a>
+                            <a href="{{ route('pet.index')}}" ><button class="boxed-btn4">Listar Peludos</button></a>
                             <hr>
-                            <a href="" ><button class="boxed-btn4">Registrar Peludo</button></a>
+                            <br>
+                            <a href="{{ route('pet.create')}}" ><button class="boxed-btn4">Registrar Peludo</button></a>
                          </div>
                     </div>
                 </div>
@@ -139,9 +145,10 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Mis Vacunas</h3>
-                            <a href="" ><button class="boxed-btn4">Listar Mi Vacunas</button></a>
+                            <a href="{{ route('myvaccine.index')}}" ><button class="boxed-btn4">Listar Mi Vacunas</button></a>
                             <hr>
-                            <a href="" ><button class="boxed-btn4">Registrar Mi Vacuna</button></a>
+                            <br>
+                            <a href="{{ route('myvaccine.create')}}" ><button class="boxed-btn4">Registrar Mi Vacuna</button></a>
                          </div>
                     </div>
                 </div>
@@ -154,9 +161,10 @@
                          </div>
                          <div class="service_content text-center">
                             <h3>Vacuna</h3>
-                            <a href="" ><button class="boxed-btn4">Listar Vacunas</button></a>
+                            <a href="{{ route('vaccine.index')}}" ><button class="boxed-btn4">Listar Vacunas</button></a>
                             <hr>
-                            <a href="" ><button class="boxed-btn4">Registrar Vacuna</button></a>
+                            <br>
+                            <a href="{{ route('vaccine.create')}}" ><button class="boxed-btn4">Registrar Vacuna</button></a>
                          </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -34,12 +35,15 @@ class UserController extends Controller
         return view('users.login');
     }
 
-    public function login(){
-        $credentials = request()->only('correo','clave');
+    public function login(Request $request){
+        $credentials = ['email' => $request->correo, 'password' => $request->clave];
+        //var_dump($request->all());
         if (Auth::attempt($credentials)){
             return 'Logeo bien';
+        }else{
+            return 'login failed';
         }
-        return 'login failed';
+       
     }
 
     /**
@@ -81,7 +85,7 @@ class UserController extends Controller
         $usuario->nombre=$request->nombre;
         $usuario->apellido=$request->apellido;
         $usuario->correo=$request->correo;
-        $usuario->clave=$request->clave;
+        $usuario->clave=Hash::make($request->clave);
         $usuario->foto=$nombre_archivo;
         $usuario->tipoUsuario=$request->tipoUsuario;
         $usuario->numeroDocumento=$request->numeroDocumento;
