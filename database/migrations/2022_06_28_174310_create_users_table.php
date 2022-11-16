@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',50);
             $table->string('apellido',50);
-            $table->string('correo', 100)->unique();
-            $table->string('clave');
+            $table->string('email', 100)->unique();
+            $table->string('password');
             $table->text('foto');
             $table->integer('tipoUsuario');
             $table->string('numeroDocumento');

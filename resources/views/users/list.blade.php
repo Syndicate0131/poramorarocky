@@ -16,7 +16,6 @@ Volver
             <th>Apellido</th>
             <th>Correo</th>
             <th>Telefono</th>
-            <th>Clave</th>
             <th>Tipo Usuario</th>
             <th>Foto</th>
             <th>Editar</th>
@@ -32,7 +31,6 @@ Volver
             <td>{{$user->apellido}}</td>
             <td>{{$user->correo}}</td>
             <td>{{$user->telefono}}</td>
-            <td>{{$user->clave}}</td>
             @if($user->tipoUsuario =='1')  
             <td>Administrador</td>
             @elseif ($user->tipoUsuario =='2')  

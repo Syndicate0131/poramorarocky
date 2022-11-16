@@ -39,7 +39,7 @@ class UserController extends Controller
         $credentials = ['email' => $request->correo, 'password' => $request->clave];
         //var_dump($request->all());
         if (Auth::attempt($credentials)){
-            return 'Logeo bien';
+            return redirect('principal');
         }else{
             return 'login failed';
         }
@@ -84,8 +84,8 @@ class UserController extends Controller
         $usuario = new User();
         $usuario->nombre=$request->nombre;
         $usuario->apellido=$request->apellido;
-        $usuario->correo=$request->correo;
-        $usuario->clave=Hash::make($request->clave);
+        $usuario->email=$request->correo;
+        $usuario->password=Hash::make($request->clave);
         $usuario->foto=$nombre_archivo;
         $usuario->tipoUsuario=$request->tipoUsuario;
         $usuario->numeroDocumento=$request->numeroDocumento;
@@ -152,8 +152,8 @@ class UserController extends Controller
         $usuario =User::findorFail($id);
         $usuario->nombre=$request->nombre;
         $usuario->apellido=$request->apellido;
-        $usuario->correo=$request->correo;
-        $usuario->clave=$request->clave;
+        $usuario->email=$request->correo;
+        $usuario->password=Hash::make($request->clave);
         $usuario->tipoUsuario=$request->tipoUsuario;
         $usuario->numeroDocumento=$request->numeroDocumento;
         $usuario->telefono=$request->telefono;

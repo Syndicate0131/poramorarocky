@@ -39,7 +39,6 @@
                                 </a>
                             </div>
                         </div>
-                        @if(Auth::user()->tipousuario===1)
                         <div class="col-xl-12 col-lg-9">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
@@ -55,18 +54,20 @@
                                 </nav>
                             </div>
                         </div>
-                        @else
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
-                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- pet_care_area_end  -->
     <!-- service_area_start  -->
+                        @if(Auth::user()->tipoUsuario===1)
+                        <h1>Si tiene permiso</h1>
+                        @else
+                        <h1>Usted no tiene permiso
+                        @endif
     <div class="service_area">
         <div class="container">
             <div class="row justify-content-center ">
@@ -171,60 +172,6 @@
             </div>
         </div>
     </div>
-    <!-- service_area_end -->
-
-
-    <section class="contact-section">
-        <div class="container">
-
-
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="contact-title">Contáctenos</h2>
-                </div>
-                <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingresa tu nombre'" placeholder="Ingresa tu nombre">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingresa tu Email'" placeholder="Ingresa tu Email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Ingresa el mensaje de consulta"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-3 offset-lg-1">
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                        <div class="media-body">
-                            <h3>+57 3166443555</h3>
-                            <p>Lunes a viernes 9am - 6pm</p>
-                        </div>
-                    </div>
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-home"></i></span>
-                        <div class="media-body">
-                            <h3>Bogotá Colombia.</h3>
-                            <p>Cll 130 c #123 91</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- footer_start  -->
     <footer class="footer">
        
