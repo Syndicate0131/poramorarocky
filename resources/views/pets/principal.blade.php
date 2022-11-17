@@ -49,7 +49,7 @@
                                         <li><a href="index.html">Funcionalidades</a></li>
                                         <li><a href="index.html">Ventajas</a></li>
                                         <li><a href="index.html">Contacto</a></li>
-                                        <li><a href="/" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
+                                        <li><a href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -63,11 +63,7 @@
         </div>
     </header>
     <!-- service_area_start  -->
-                        @if(Auth::user()->tipoUsuario===1)
-                        <h1>Si tiene permiso</h1>
-                        @else
-                        <h1>Usted no tiene permiso
-                        @endif
+    @auth
     <div class="service_area">
         <div class="container">
             <div class="row justify-content-center ">
@@ -77,7 +73,9 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row justify-content-center">
+            @if(Auth::user()->tipoUsuario===1)
                 <div class="col-lg-4 col-md-6">
                     <div class="single_service">
                          <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
@@ -94,6 +92,8 @@
                          </div>
                     </div>
                 </div>
+                @endif
+                @if(Auth::user()->tipoUsuario===1 || Auth::user()->tipoUsuario===2)
                 <div class="col-lg-4 col-md-6">
                     <div class="single_service">
                          <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
@@ -170,8 +170,74 @@
                     </div>
                 </div>
             </div>
+            @endif
+    @if(Auth::user()->tipoUsuario===3)
+    <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-7 col-md-10">
+                    <div class="section_title text-center mb-95">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                    <div class="single_service active">
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/gato.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Peludos</h3>
+                            <a href="{{ route('pet.index')}}" ><button class="boxed-btn4">Listar Peludos</button></a>
+                            <hr>
+                            <br>
+                            <a href="{{ route('pet.create')}}" ><button class="boxed-btn4">Registrar Peludo</button></a>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service active">
+                        
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/vacuna.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Mis Vacunas</h3>
+                            <a href="{{ route('myvaccine.index')}}" ><button class="boxed-btn4">Listar Mi Vacunas</button></a>
+                            <hr>
+                            <br>
+                            <a href="{{ route('myvaccine.create')}}" ><button class="boxed-btn4">Registrar Mi Vacuna</button></a>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                         <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                             <div class="service_icon">
+                                 <img src="{{ asset('dash/img/lista.png')}}" alt="">
+                             </div>
+                         </div>
+                         <div class="service_content text-center">
+                            <h3>Vacuna</h3>
+                            <a href="{{ route('vaccine.index')}}" ><button class="boxed-btn4">Listar Vacunas</button></a>
+                            <hr>
+                            <br>
+                            <a href="{{ route('vaccine.create')}}" ><button class="boxed-btn4">Registrar Vacuna</button></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+    @endif
         </div>
     </div>
+    @endauth
+ 
+    @guest
+        <h1 style="margin: 100px; text-align: center;" class="form_title title">No a iniciado Sesión</h1>
+    @endguest
     <!-- footer_start  -->
     <footer class="footer">
        

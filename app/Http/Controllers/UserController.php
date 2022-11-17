@@ -41,9 +41,15 @@ class UserController extends Controller
         if (Auth::attempt($credentials)){
             return redirect('principal');
         }else{
-            return 'login failed';
+            return redirect('log')
+            ->with('message', "Error en inicio Sesion");
         }
        
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        return redirect('/');
     }
 
     /**

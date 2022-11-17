@@ -21,6 +21,9 @@
                 <input type="text" placeholder="Email" class="form__input" name="correo" id="correo">
                 <label for="">Contraseña</label>
                 <input type="text" placeholder="Contraseña" class="form__input" name="clave" id="clave">
+                @if (session('message'))
+                 <p class="menerr">{{ session('message') }}</p>
+                @endif
                 <button class="form__button button submit" type="submit">INICIAR SESIÓN</button>
             </form>
         </div>

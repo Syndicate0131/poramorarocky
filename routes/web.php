@@ -31,6 +31,7 @@ Route::get('principal', [PetController::class, 'principal']);
 Route::resource('usuario', UserController::class);
 Route::post('login',[UserController::class,'login'])->name('login');
 Route::get('log', [UserController::class, 'log']);
+Route::get('logout', [UserController::class, 'logout']);
 Route::get('formuser', [UserController::class, 'create']);
 
 //Adopcion

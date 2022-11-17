@@ -36,6 +36,13 @@ body {
 }
 
 /**/
+.menerr{
+    margin: 10px;
+    margin-bottom: -20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d41610;
+}
 .main {
     position: relative;
     width: 1000px;
