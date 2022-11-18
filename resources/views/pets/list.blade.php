@@ -6,6 +6,7 @@ Volver
 </button>
 </a>
 <main class="content-form-pet">
+    @auth
 <table class="table table-hover table-bordered" id="datat">
 <a href="{{route('pet.create')}}"><button class="button-prin">Registrar Peludo</button></a>
     <thead>
@@ -39,5 +40,9 @@ Volver
         @endforeach
     </tbody>
 </table>
+    @endauth
+    @guest
+    <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+    @endguest
 </main>
 @endsection

@@ -4,6 +4,8 @@
 
 <div class="form-head">
             <a href="{{ route('adoption.index') }}" class="icon-home" ><i class="bi bi-arrow-left-short"></i></a>
+            @auth
+            @if(Auth::user()->tipoUsuario===1 || Auth::user()->tipoUsuario===2)
             <h1 class="title-form">Registrar Adoptante</h1>
         </div>
             <!-- Form -->
@@ -69,5 +71,12 @@
             
             </div>
         </form>
+        @else
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted No tiene Permiso En este modulo</h1>
+        @endif
+        @endauth
+        @guest
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        @endguest
 </main>
 @endsection

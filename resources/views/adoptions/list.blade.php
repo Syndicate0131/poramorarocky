@@ -6,6 +6,8 @@ Volver
 </button>
 </a>
 <main class="content-form-adop">
+    @auth
+    @if(Auth::user()->tipoUsuario===1 || Auth::user()->tipoUsuario===2)
 <table class="table table-hover table-bordered" id="datat">
 <a href="{{route('adoption.create')}}"><button class="button-prin">Registrar Caso de Adopcion</button></a>
     <thead>
@@ -51,5 +53,12 @@ Volver
         @endforeach
     </tbody>
 </table>
+    @else
+    <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted No tiene Permiso En este modulo</h1>
+    @endif
+    @endauth
+    @guest
+    <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+    @endguest
 </main>
 @endsection

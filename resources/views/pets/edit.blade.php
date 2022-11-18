@@ -3,6 +3,7 @@
 <main class="content-form">
 <div class="form-head">
             <a href="{{ route('pet.index') }}" class="icon-home" ><i class="bi bi-arrow-left-short"></i></a>
+            @auth
             <h1 class="title-form">Actualizar Peludo</h1>
         </div>
     <form action="{{ route('pet.update', $pets->id) }}" method="POST" class="form" enctype="multipart/form-data"  >
@@ -46,5 +47,9 @@
             
             </div>
         </form>
+        @endauth
+        @guest
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        @endguest
 </main>
 @endsection

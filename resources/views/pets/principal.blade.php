@@ -34,7 +34,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="{{ asset('dash/img/logo.png')}}" alt="" class="logo-head">
                                 </a>
                             </div>
@@ -43,12 +43,12 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation" class="nav">
-                                        <li><a  href="index.html">Inicio</a></li>
-                                        <li><a  href="index.html">Nosotros</a></li>
-                                        <li><a href="index.html">Módulos</a></li>
-                                        <li><a href="index.html">Funcionalidades</a></li>
-                                        <li><a href="index.html">Ventajas</a></li>
-                                        <li><a href="index.html">Contacto</a></li>
+                                        <li><a  href="#">Inicio</a></li>
+                                        <li><a  href="#">Nosotros</a></li>
+                                        <li><a href="#">Módulos</a></li>
+                                        <li><a href="#">Funcionalidades</a></li>
+                                        <li><a href="#">Ventajas</a></li>
+                                        <li><a href="#">Contacto</a></li>
                                         <li><a href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
                                     </ul>
                                 </nav>
@@ -236,7 +236,7 @@
     @endauth
  
     @guest
-        <h1 style="margin: 100px; text-align: center;" class="form_title title">No a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem" class="form_title title">No a iniciado Sesión</h1>
     @endguest
     <!-- footer_start  -->
     <footer class="footer">
