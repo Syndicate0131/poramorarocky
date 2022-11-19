@@ -30,7 +30,7 @@
             <input type="tel" name="telefono" id="">
             <label for="clave">Contraseña: <span class="text-red">*<p>{{$errors->first('clave') }}</p></span></label>
             <input type="password" name="clave">
-            <label for="foto">Foto: <p>{{$errors->first('foto') }}</p></label>
+            <label for="foto">Foto:  <span class="text-red">*<p>{{$errors->first('foto') }}</p></span></label>
             <input type="file" name="foto" id="" accept="image/png, .jpeg, .jpg">
             <label for="tipoUsuario">Tipo de usuario: <span class="text-red">* <p>{{$errors->first('tipoUsuario') }}</p></span></label>
             <select class="select-rol" name="tipoUsuario" id="">
@@ -41,7 +41,7 @@
             </select>
             <div class="button">
                 
-                    <button type="submit" class="ov-btn-slide-right" >
+                    <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de realizar el registro? Esta sujeto a cambio por errores')">
                        Registrar Usuario
                     </button>
             
@@ -52,7 +52,7 @@
         @endif
         @endauth
         @guest
-        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
         @endguest
     </main>
 </body>

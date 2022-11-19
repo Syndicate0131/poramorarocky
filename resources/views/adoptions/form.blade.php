@@ -6,7 +6,7 @@
             <a href="{{ route('adoption.index') }}" class="icon-home" ><i class="bi bi-arrow-left-short"></i></a>
             @auth
             @if(Auth::user()->tipoUsuario===1 || Auth::user()->tipoUsuario===2)
-            <h1 class="title-form">Registrar Adoptante</h1>
+            <h1 class="title-form">Registrar Adopcion</h1>
         </div>
             <!-- Form -->
             <form action="{{ route('adoption.store') }}" method="POST" class="form" enctype="multipart/form-data"  >
@@ -65,8 +65,8 @@
                 </select>
 
             <div class="button">
-                    <button type="submit" class="ov-btn-slide-right" onclick="alertapeludoform();">
-                       Registrar Peludo
+                    <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de realizar el registro? Esta sujeto a cambio por errores')">
+                       Registrar Adopcion
                     </button>
             
             </div>
@@ -76,7 +76,7 @@
         @endif
         @endauth
         @guest
-        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
         @endguest
 </main>
 @endsection

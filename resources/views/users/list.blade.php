@@ -45,7 +45,7 @@ Volver
             <td><a href="{{route('usuario.edit',$user->id)}}">Editar</a></td>            <td><form action="{{route('usuario.destroy',$user->id)}}" method="post">
             @csrf
             @method('DELETE')    
-            <button>Eliminar Usuario</button></form>
+            <button onclick="return confirm('Esta seguro de eliminar el Usuario?')" >Eliminar Usuario</button></form>
         </td>
         </tr>
         @endforeach
@@ -56,7 +56,7 @@ Volver
 @endif
 @endauth
 @guest
-<h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+<h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
 @endguest
 </main>
 @endsection

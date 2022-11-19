@@ -42,7 +42,7 @@ Volver
 </table>
     @endauth
     @guest
-    <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+    <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
     @endguest
 </main>
 @endsection

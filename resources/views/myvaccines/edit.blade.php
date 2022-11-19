@@ -20,7 +20,7 @@
 
             <div class="button">
 
-                    <button type="submit" class="ov-btn-slide-right" >
+                    <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de actualizar el registro? Esta sujeto a cambio por errores')">
                       Actualizar Mi vacuna
                     </button>
             
@@ -28,7 +28,7 @@
         </form>
         @endauth
         @guest
-        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
         @endguest
 </main>
 @endsection

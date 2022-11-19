@@ -5,7 +5,7 @@
             <a href="{{ route('adoption.index') }}" class="icon-home" ><i class="bi bi-arrow-left-short"></i></a>
             @auth
             @if(Auth::user()->tipoUsuario===1 || Auth::user()->tipoUsuario===2)
-            <h1 class="title-form">Actualizar Estado Caso de Aopcion</h1>
+            <h1 class="title-form">Actualizar Estado Caso de Adopcion</h1>
         </div>
     <form action="{{ route('adoption.update', $adoptions->id) }}" method="POST" class="form" enctype="multipart/form-data"  >
             @csrf
@@ -45,7 +45,7 @@
 
             <div class="button">
 
-                    <button type="submit" class="ov-btn-slide-right" >
+                    <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de actualizar el registro? Esta sujeto a cambio por errores')">
                       Actualizar Mi vacuna
                     </button>
             
@@ -56,7 +56,7 @@
         @endif
         @endauth
         @guest
-        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem;" class="form_title title">Usted no ha iniciado Sesión</h1>
         @endguest
 </main>
 @endsection

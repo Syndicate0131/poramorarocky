@@ -49,7 +49,7 @@
                                         <li><a href="#">Funcionalidades</a></li>
                                         <li><a href="#">Ventajas</a></li>
                                         <li><a href="#">Contacto</a></li>
-                                        <li><a href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
+                                        <li><a onclick="return confirm('Desea cerrar la sesión actual?')" href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -73,7 +73,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="row justify-content-center">
             @if(Auth::user()->tipoUsuario===1)
                 <div class="col-lg-4 col-md-6">
@@ -236,7 +235,7 @@
     @endauth
  
     @guest
-        <h1 style="margin: 100px; text-align: center; font-size:5rem" class="form_title title">No a iniciado Sesión</h1>
+        <h1 style="margin: 100px; text-align: center; font-size:5rem" class="form_title title">No ha iniciado Sesión</h1>
     @endguest
     <!-- footer_start  -->
     <footer class="footer">
