@@ -43,13 +43,28 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation" class="nav">
-                                        <li><a  href="#">Inicio</a></li>
-                                        <li><a  href="#">Nosotros</a></li>
-                                        <li><a href="#">Módulos</a></li>
-                                        <li><a href="#">Funcionalidades</a></li>
-                                        <li><a href="#">Ventajas</a></li>
-                                        <li><a href="#">Contacto</a></li>
+                                        @auth
+                                        <li><a  href="#"><h3>!Bienvenido!</h3></a></li>
+                                        <li><a href="#"><h3>{{Auth::user()->nombre}} {{Auth::user()->apellido}}</h3></a></li>
+                                        @if(Auth::user()->tipoUsuario===1)
+                                        <li><a href="#"><h3>Rol: Administrador</h3></a></li>
+                                        @elseif(Auth::user()->tipoUsuario===2)
+                                        <li><a href="#"><h3>Rol: Director</h3></a></li>
+                                        @elseif(Auth::user()->tipoUsuario===3)
+                                        <li><a href="#"><h3>Rol: Voluntario</h3></a></li>
+                                        @endif
+                                        <li></li>
                                         <li><a onclick="return confirm('Desea cerrar la sesión actual?')" href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
+                                        @endauth
+                                        
+                                        @guest
+                                        <li><a  href="#"><h3>Usuario</h3></a></li>
+                                        <li><a  href="#"><h3>sin verificar</h3></a></li>
+                                        <li><a  href="#"><h3>sesión</h3></a></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li><a  href="/" ><button class="boxed-btn4">Salir a la pagina Principal</button></a></li>
+                                        @endguest
                                     </ul>
                                 </nav>
                             </div>
