@@ -64,7 +64,8 @@ class UserController extends Controller
         $reglas=[
             "nombre" => 'required|string',
             "apellido" => 'required|string',
-            "numeroDocumento"=> 'required|numeric:unique:User,numeroDocumento',
+            "numeroDocumento"=> 'required|numeric:unique:users,numeroDocumento',
+            "correo"=> 'required|string:unique:users,email',
             "telefono" => 'required|string',
             "clave" => 'required|min:8',
             "foto"=>'required|image',
@@ -138,7 +139,8 @@ class UserController extends Controller
         $reglas=[
             "nombre" => 'required|string',
             "apellido" => 'required|string',
-            "numeroDocumento"=> 'required|numeric:unique:User,numeroDocumento',
+            "numeroDocumento"=> 'required|numeric:unique:users,numeroDocumento',
+            "correo"=> 'required|string:unique:users,email',
             "telefono" => 'required|string',
             "clave" => 'required|min:8',
             "tipoUsuario"=>'required|numeric',
