@@ -64,8 +64,8 @@ class UserController extends Controller
         $reglas=[
             "nombre" => 'required|string',
             "apellido" => 'required|string',
-            "numeroDocumento"=> 'required|numeric:unique:users,numeroDocumento',
-            "correo"=> 'required|string:unique:users,email',
+            "numeroDocumento"=> 'required|numeric|unique:users,numeroDocumento',
+            "correo"=> 'required|string|unique:users,email',
             "telefono" => 'required|string',
             "clave" => 'required|min:8',
             "foto"=>'required|image',
@@ -76,7 +76,7 @@ class UserController extends Controller
             'required' =>'Este campo :attribute es requerido',
             'min' => 'El campo debe tener minimo :min y maximo :max caracteres',
             'numeric' => 'El campo :attribute debe ser numerico',
-            'unique' =>'El dato ingresado en el campo :attribute ya existe'
+            'unique' =>'El dato ingresado en el campo :attribute ya existe en el sistema'
         ]);
         if ($v->fails()) {
             //Validación incorrecta
@@ -139,8 +139,8 @@ class UserController extends Controller
         $reglas=[
             "nombre" => 'required|string',
             "apellido" => 'required|string',
-            "numeroDocumento"=> 'required|numeric:unique:users,numeroDocumento',
-            "correo"=> 'required|string:unique:users,email',
+            "numeroDocumento"=> 'required|numeric|unique:users,numeroDocumento',
+            "correo"=> 'required|string|unique:users,email',
             "telefono" => 'required|string',
             "clave" => 'required|min:8',
             "tipoUsuario"=>'required|numeric',
@@ -150,7 +150,7 @@ class UserController extends Controller
             'required' =>'Este campo :attribute es requerido',
             'min' => 'El campo debe tener minimo :min y maximo :max caracteres',
             'numeric' => 'El campo :attribute debe ser numerico',
-            'unique' =>'El dato ingresado en el campo :attribute ya existe'
+            'unique' =>'El dato ingresado en el campo :attribute ya existe en el sistema'
         ]);
         if ($v->fails()){
             return redirect('usuario/'. $id .'/edit')

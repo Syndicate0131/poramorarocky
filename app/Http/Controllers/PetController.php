@@ -71,7 +71,7 @@ class PetController extends Controller
 
         $mensajes=
         [
-            "required" => "Este campo es oligatorio",
+            'required' =>'Este campo :attribute es requerido',
             "alpha" => "El campo solo acepta caracteres alfabeticos",
             "image" => "El archivo debe ser una imagen",
             "numeric" => "El campo solo acepta caracteres numericos"

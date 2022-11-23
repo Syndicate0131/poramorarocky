@@ -34,9 +34,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="/">
                                     <img src="{{ asset('dash/img/logo.png')}}" alt="" class="logo-head">
-                                </a>
                             </div>
                         </div>
                         <div class="col-xl-12 col-lg-9">
@@ -53,7 +51,6 @@
                                         @elseif(Auth::user()->tipoUsuario===3)
                                         <li><a href="#"><h3>Rol: Voluntario</h3></a></li>
                                         @endif
-                                        <li></li>
                                         <li><a onclick="return confirm('Desea cerrar la sesión actual?')" href="/logout" ><button class="boxed-btn4">Cerrar Sesión</button></a></li>
                                         @endauth
                                         

@@ -22,12 +22,12 @@
             <input type="text" name="nombre">
             <label for="apellido">apellido: <span class="text-red">*<p>{{$errors->first('apellido') }}</p></span></label>
             <input type="text" name="apellido">
-            <label for="correo">Correo: <span class="text-red">*<p>{{$errors->first('correo') }}</p></span></label>
-            <input type="text" name="correo">
             <label for="numeroDocumento">Número de documento: <span class="text-red">*<p>{{$errors->first('numeroDocumento') }}</p></span></label>
             <input type="number" name="numeroDocumento" id="">
             <label for="telefono">Telefono: <span class="text-red">*<p>{{$errors->first('telefono') }}</p></span></label>
             <input type="tel" name="telefono" id="">
+            <label for="correo">Correo: <span class="text-red">*<p>{{$errors->first('correo') }}</p></span></label>
+            <input type="text" name="correo">
             <label for="clave">Contraseña: <span class="text-red">*<p>{{$errors->first('clave') }}</p></span></label>
             <input type="password" name="clave">
             <label for="foto">Foto:  <span class="text-red">*<p>{{$errors->first('foto') }}</p></span></label>

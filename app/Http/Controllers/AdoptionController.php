@@ -69,7 +69,7 @@ class AdoptionController extends Controller
             'max' => 'el campo :attribute debe tener maximo :max caracteres',
             'email' => 'el campo :attribute debe ser un correo valido',
             'date' => 'el campo :attribute debe ser una fecha valida',
-            'mimes' => 'el campo :attribute debe ser un archivo pdf',
+
         ]);
         // 3 Validar
         // fails return si la validacion falla y un false si no

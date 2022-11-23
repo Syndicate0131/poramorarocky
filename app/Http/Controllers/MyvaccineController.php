@@ -53,7 +53,7 @@ class MyvaccineController extends Controller
     $mensajes=
     [
         "before_or_equal" => "La fecha debe ser de un dia posterior o una fecha anterior",
-        "required" => "Este campo es oligatorio"
+        'required' =>'Este campo :attribute es requerido',
     ];
 
 

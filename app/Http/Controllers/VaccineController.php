@@ -37,15 +37,16 @@ class VaccineController extends Controller
     public function store(Request $request)
 {
         $reglas = [
-            "nombre" => 'required|alpha',
+            "nombre" => 'required|alpha|unique:vaccines,nombreVacuna',
 
 
         ];
 
         $mensajes=
         [
-            "required" => "Este campo es oligatorio",
-            "alpha" => "El campo solo acepta caracteres alfabeticos"
+            'required' =>'Este campo :attribute es requerido',
+            "alpha" => "El campo solo acepta caracteres alfabeticos",
+            'unique' =>'El dato ingresado en el campo :attribute ya existe en el sistema'
 
 
         ];
@@ -104,15 +105,16 @@ class VaccineController extends Controller
     {
 
         $reglas = [
-            "nombre" => 'required|alpha',
+            "nombre" => 'required|alpha|unique:vaccines,nombreVacuna',
 
 
         ];
 
         $mensajes=
         [
-            "required" => "Este campo es oligatorio",
-            "alpha" => "El campo solo acepta caracteres alfabeticos"
+            'required' =>'Este campo :attribute es requerido',
+            "alpha" => "El campo solo acepta caracteres alfabeticos",
+            'unique' =>'El dato ingresado en el campo :attribute ya existe en el sistema'
 
 
         ];
