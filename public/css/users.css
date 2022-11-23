@@ -21,6 +21,20 @@ input{
     color: var(--color-input);
     box-shadow: 2px 2px 2px 2px #eee;
 }
+.boton-list{
+    margin: 0%;
+    width: 100%;
+    border: none;
+    font-size:16px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--secundary-color);
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    font-weight: bold;
+    transition: .3s;
+    margin-top:20px;
+}
 .button{
     padding:2px;
     height:2%;

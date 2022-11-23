@@ -48,7 +48,7 @@ Volver
             <td>{{$adoption->user_id}}</td>
             <td>{{$adoption->pet_id}}</td>
             <td>{{$adoption->estado}}</td>
-            <td><a href="{{route('adoption.edit',$adoption->id)}}">Editar</a></td>
+            <td><a href="{{route('adoption.edit',$adoption->id)}}"><button class="boton-list">Editar</button></a></td>
         </tr>
         @endforeach
     </tbody>

@@ -41,12 +41,15 @@
                     <option value="Aprobado">
                         Aprobado
                     </option>
+                    <option value="Denegado">
+                        Denegado
+                    </option>
                 </select>
 
             <div class="button">
 
                     <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de actualizar el registro? Esta sujeto a cambio por errores')">
-                      Actualizar Mi vacuna
+                      Actualizar Adopcion
                     </button>
             
             </div>

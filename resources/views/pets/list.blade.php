@@ -35,7 +35,7 @@ Volver
             <td>{{$pet->estadoPeludo}}</td>
             <td>{{$pet->user_id}}</td>
             <td><img src="photoPet/{{$pet->foto}}" alt="Foto Peludo" width="100" height="100"></td>
-            <td><a href="{{route('pet.edit',$pet->id)}}">Editar</a></td>
+            <td><a href="{{route('pet.edit',$pet->id)}}"><button class="boton-list">Editar</button></a></td>
         </tr>
         @endforeach
     </tbody>

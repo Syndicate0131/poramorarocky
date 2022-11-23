@@ -42,10 +42,10 @@ Volver
             @endif
 
             <td><img src="photoUser/{{$user->foto}}" alt="Foto Usuario" width="100" height="100"></td>
-            <td><a href="{{route('usuario.edit',$user->id)}}">Editar</a></td>            <td><form action="{{route('usuario.destroy',$user->id)}}" method="post">
+            <td><a href="{{route('usuario.edit',$user->id)}}"><button class="boton-list">Editar</button></a></td>            <td><form action="{{route('usuario.destroy',$user->id)}}" method="post">
             @csrf
             @method('DELETE')    
-            <button onclick="return confirm('Esta seguro de eliminar el Usuario?')" >Eliminar Usuario</button></form>
+            <button onclick="return confirm('Esta seguro de eliminar el Usuario?')" class="boton-list" >Eliminar Usuario</button></form>
         </td>
         </tr>
         @endforeach

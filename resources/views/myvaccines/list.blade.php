@@ -25,7 +25,7 @@ Volver
             <td>{{$myvac->fechaVacuna}}</td>
             <td>{{$myvac->pets_id}}</td>
             <td>{{$myvac->vaccines_id}}</td>
-            <td><a href="{{route('myvaccine.edit',$myvac->id)}}">Editar</a></td>
+            <td><a href="{{route('myvaccine.edit',$myvac->id)}}"><button class="boton-list">Editar</button></a></td>
         </tr>
         @endforeach
     </tbody>

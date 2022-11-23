@@ -50,7 +50,7 @@
             <div class="button">
 
                     <button type="submit" class="ov-btn-slide-right" onclick="return confirm('Esta seguro de actualizar el registro? Esta sujeto a cambio por errores')">
-                      Actualizar Vacuna
+                      Actualizar Usuario
                     </button>
             
             </div>
